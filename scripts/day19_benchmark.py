@@ -7,10 +7,13 @@ from __future__ import annotations
 
 import argparse
 import csv
+import sys
 import time
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from core.token_manager import token_manager
 from rag.graph_rag import graph_rag
@@ -245,4 +248,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

@@ -1085,6 +1085,27 @@ class GraphDB:
         self, query_text: str, top_k: int = 5
     ) -> List[Dict[str, Any]]:
         """Search entities by text similarity using full-text search."""
+        import re
+
+        def _sanitize_for_lucene(raw: str) -> str:
+            # Remove control characters and trim
+            text = (raw or "").replace("\n", " ").replace("\r", " ").strip()
+            if not text:
+                return ""
+
+            # Tokenize by whitespace, then escape Lucene special chars per token
+            # Special chars: + - && || ! ( ) { } [ ] ^ " ~ * ? : \ /
+            special = re.compile(r'([+\-!(){}\[\]^"~*?:\\/]|&&|\|\|)')
+            tokens = [t for t in text.split() if t]
+            escaped_tokens = [special.sub(r"\\\1", t) for t in tokens]
+
+            # Use OR query for robustness on noisy user input
+            return " OR ".join(escaped_tokens)
+
+        sanitized_query = _sanitize_for_lucene(query_text)
+        if not sanitized_query:
+            return []
+
         with self._get_driver().session() as session:
             # Create full-text index if it doesn't exist
             try:
@@ -1094,20 +1115,29 @@ class GraphDB:
             except Exception as e:
                 logger.debug(f"Fulltext index entity_text already exists or creation failed: {e}")
 
-            result = session.run(
-                """
-                CALL db.index.fulltext.queryNodes('entity_text', $query_text)
-                YIELD node, score
-                RETURN node.id as entity_id, node.name as name, node.type as type,
-                       node.description as description, node.importance_score as importance_score,
-                       score
-                ORDER BY score DESC
-                LIMIT $top_k
-                """,
-                query_text=query_text,
-                top_k=top_k,
-            )
-            return [record.data() for record in result]
+            try:
+                result = session.run(
+                    """
+                    CALL db.index.fulltext.queryNodes('entity_text', $query_text)
+                    YIELD node, score
+                    RETURN node.id as entity_id, node.name as name, node.type as type,
+                           node.description as description, node.importance_score as importance_score,
+                           score
+                    ORDER BY score DESC
+                    LIMIT $top_k
+                    """,
+                    query_text=sanitized_query,
+                    top_k=top_k,
+                )
+                return [record.data() for record in result]
+            except Exception as e:
+                logger.warning(
+                    "Fulltext entity query failed for input=%r sanitized=%r: %s",
+                    query_text,
+                    sanitized_query,
+                    e,
+                )
+                return []
 
     def get_entities_for_chunks(self, chunk_ids: List[str]) -> List[Dict[str, Any]]:
         """Get all entities contained in the specified chunks."""

@@ -1,0 +1,828 @@
+question_index,question,expected_answer,flat_mode,flat_answer,flat_latency_sec,flat_sources_count,flat_chunks_used,flat_in_tokens_est,flat_out_tokens_est,flat_total_tokens_est,flat_correct_manual,flat_hallucination_manual,flat_error,graph_mode,graph_answer,graph_latency_sec,graph_sources_count,graph_chunks_used,graph_in_tokens_est,graph_out_tokens_est,graph_total_tokens_est,graph_correct_manual,graph_hallucination_manual,graph_error,hallucination_note
+1,"What movies starring Keanu Reeves are listed, and who directed them?",,chunk_only,"### Summary
+The provided context does not contain any information about movies starring **Keanu Reeves** or details about their directors. 
+
+### Details
+- **Keanu Reeves** is not mentioned in any of the chunks.
+- No movies associated with him are listed.
+- Therefore, there are **no directors** to report for his films.
+
+### Conclusion
+Unfortunately, there is **insufficient information** regarding Keanu Reeves and his movies in the provided context.",4.174,38,38,15,95,110,,,,graph_enhanced,"The provided context does not contain any information about movies starring **Keanu Reeves** or details about their directors. Therefore, I cannot provide a comprehensive answer regarding this specific inquiry. 
+
+### Summary
+- **No movies starring Keanu Reeves** are listed in the provided context.
+- **No directors** related to such movies are mentioned.
+
+If you have any other questions or need information on a different topic, feel free to ask!",2.776,54,54,15,88,103,,,,
+2,Which TV shows created by Vince Gilligan are in the dataset?,,chunk_only,"### Summary
+The dataset does not explicitly mention any TV shows created by Vince Gilligan. Therefore, it is not possible to provide a list of such shows based on the provided context.
+
+### Analysis of Context
+- **Creator Information**: The context mentions potential relationship/grouping columns, including `creator_ids` and `creators`, but does not specify any shows associated with Vince Gilligan.
+- **Data Quality**: The data quality section indicates that the `creators` column has 27.2% missing values, which may affect the ability to identify all creators accurately.
+
+### Conclusion
+Since the context does not provide specific information about TV shows created by Vince Gilligan, I cannot provide a list. Further data or a more detailed dataset would be required to answer this question accurately.",2.953,43,43,13,157,170,,,,graph_enhanced,"### Summary
+The dataset does not contain any TV shows created by Vince Gilligan. There is no mention of his works or any related titles in the provided context.
+
+### Details
+- **Vince Gilligan**: Known for creating popular TV shows such as *Breaking Bad* and *Better Call Saul*.
+- **Dataset Analysis**: The provided context does not list any shows associated with Vince Gilligan.
+
+### Conclusion
+There is **no information** regarding TV shows created by Vince Gilligan in the dataset. If you need details about specific shows or other creators, please let me know!",4.809,69,69,13,118,131,,,,
+3,Find a movie with high ROI and summarize its genre and main cast.,,chunk_only,"### Summary
+To find a movie with high ROI (Return on Investment), we can analyze the available data for movies with non-null values for both revenue_usd and budget_usd. However, the context does not provide specific ROI values or a direct list of movies with high ROI. 
+
+### ROI Analysis
+- **ROI Calculation**: ROI can be calculated using the formula:
+  ROI_pct = (revenue_usd - budget_usd) / budget_usd * 100
+- **Data Quality Issues**: 
+  - **budget_usd**: 23.4% missing
+  - **revenue_usd**: 22.5% missing
+  - **roi_pct**: 23.4% missing
+
+### Movie Data Insights
+From the context, we have the following relevant columns for movies:
+- **Genres**: Indicates the type of movie.
+- **Cast Names**: Lists the main actors in the movie.
+- **Budget and Revenue**: Required for ROI calculation.
+
+### Example Movie with High ROI
+Since specific ROI values are not provided in the context, we can summarize the characteristics of a movie that might typically have high ROI based on the available data structure.
+
+| **Movie Title** | **Genres**               | **Main Cast**                             |
+|------------------|-------------------------|-------------------------------------------|
+| Example Movie    | Comedy, Drama, Romance   | Tim Roth, Jennifer Beals, David Proval   |
+
+### Conclusion
+The context does not specify a particular movie with high ROI. To identify such a movie, one would need to calculate the ROI for each movie using the available budget and revenue data, which is not fully provided here. Therefore, a specific movie cannot be named based on the current context.",5.487,36,36,14,348,362,,,,graph_enhanced,"### Summary
+To find a movie with high ROI, we can analyze the provided data for movies that include financial metrics such as revenue and budget. The movie ""OSS 117 Is Unleashed"" has a notable ROI of 6949.1%, indicating a very high return on investment.
+
+### Movie Details
+
+| **Attribute**         | **Details**                                   |
+|-----------------------|-----------------------------------------------|
+| **Title**             | OSS 117 Is Unleashed                          |
+| **TMDB ID**          | 163879                                        |
+| **IMDB ID**           | tt0141673                                    |
+| **Genres**            | Action, Crime                                 |
+| **Budget (USD)**      | Not specified                                 |
+| **Revenue (USD)**     | Not specified                                 |
+| **Profit (USD)**      | Not specified                                 |
+| **ROI (%)**           | 6949.1                                       |
+
+### Main Cast
+
+| **Actor Name**        | **Character**                                 |
+|-----------------------|-----------------------------------------------|
+| **Jean Dujardin**     | Hubert Bonisseur de La Bath                  |
+| **Ludivine Sagnier**  | Not specified                                 |
+| **Pierre Niney**      | Not specified                                 |
+| **Bérénice Bejo**     | Not specified                                 |
+
+### Conclusion
+- **OSS 117 Is Unleashed** is a high ROI movie in the **Action** and **Crime** genres.
+- The main cast includes **Jean Dujardin** as the lead character, with other notable actors contributing to the film. 
+
+This analysis highlights the potential profitability of the film, making it a significant entry in the dataset.",5.536,60,60,14,344,358,,,,
+4,What are the recommended titles related to The Matrix?,,chunk_only,"The context provided does not contain any information regarding **The Matrix** or its related titles. Therefore, I cannot provide a list of recommended titles related to it.
+
+### Summary
+- **No information** about The Matrix or related titles is available in the provided context.",1.564,5,5,10,53,63,,,,graph_enhanced,"The context provided does not contain any information about ""The Matrix"" or its related titles. Therefore, I cannot provide the recommended titles related to it.
+
+### Summary
+- **No information** about ""The Matrix"" is available in the provided context.
+- **Cannot provide** recommended titles related to ""The Matrix.""",1.743,12,12,10,63,73,,,,
+5,Which actor appears in both movie and TV credits according to this dataset?,,chunk_only,"### Summary
+Based on the provided dataset, several actors have both movie and TV credits. Notable examples include:
+
+- **Lars von Trier**
+- **Albert Brooks**
+- **Peter Cushing**
+- **Ellen DeGeneres**
+- **Elizabeth Perkins**
+
+### Actors with Both Movie and TV Credits
+
+| Actor Name        | Total Movie Credits | Total TV Credits | Known Movies                                      | Known TV Shows                                      |
+|-------------------|---------------------|------------------|---------------------------------------------------|----------------------------------------------------|
+| Lars von Trier    | 59                  | 4                | The Idiots, Side by Side, To Each His Own Cinema | Klovn, Grimme Award, The Story of Film: An Odyssey |
+| Albert Brooks      | 48                  | 32               | Finding Nemo, Taxi Driver, Drive                  | The Simpsons                                        |
+| Peter Cushing     | 132                 | 19               | Star Wars, Lolita, Top Secret!                   | The Avengers, Tales of the Unexpected               |
+| Ellen DeGeneres   | 57                  | 60               | Finding Nemo, Finding Dory                         | The Simpsons, The Kelly Clarkson Show               |
+| Elizabeth Perkins  | 44                  | 31               | The Housemaid, Spider-Man: Across the Spider-Verse| Monk, Watch What Happens Live with Andy Cohen      |
+
+### Insights
+- **Lars von Trier** is primarily known for directing but also has notable TV credits.
+- **Albert Brooks** has a significant presence in both film and television, particularly with his work on **The Simpsons**.
+- **Peter Cushing** is recognized for his extensive film career and has also appeared in several TV shows.
+- **Ellen DeGeneres** is well-known for her acting roles in movies and her long-running TV show.
+- **Elizabeth Perkins** has a diverse career in both movies and television series.
+
+### Conclusion
+The dataset indicates that multiple actors have contributed to both film and television, showcasing their versatility in the entertainment industry.",6.039,22,22,14,414,428,,,,graph_enhanced,"### Summary
+Several actors in the dataset have credits in both movies and TV shows. Below is a detailed list of those actors along with their relevant information.
+
+### Actors with Movie and TV Credits
+
+| Name               | Gender | Birthday       | Known Movies                                   | Total Movie Credits | Known TV Shows                                   | Total TV Credits |
+|--------------------|--------|----------------|------------------------------------------------|---------------------|--------------------------------------------------|------------------|
+| Ellen DeGeneres    | Female | 1958-01-26     | Finding Nemo, Finding Dory, Step Up Revolution | 57                  | The Simpsons, The Kelly Clarkson Show, The Toni... | 60               |
+| Allison Janney     | Female | 1959-11-19     | Finding Nemo, The Creator, 10 Things I Hate About You | 106                | Law & Order, The Simpsons, Family Guy             | 71               |
+| Albert Brooks      | Male   | 1947-07-22     | Finding Nemo, Taxi Driver, Drive               | 48                  | The Simpsons                                     | 32               |
+| Peter Cushing      | Male   | 1913-05-26     | Star Wars, Lolita, Top Secret!                 | 132                 | The Avengers, Tales of the Unexpected             | 19               |
+
+### Insights
+- **Ellen DeGeneres** is known for her roles in both animated films and various TV shows, showcasing her versatility as an entertainer.
+- **Allison Janney** has a substantial filmography in both film and television, indicating her prominence in the acting industry.
+- **Albert Brooks** is recognized for his contributions to both animated films and television series, particularly in comedic roles.
+- **Peter Cushing**, a legendary actor, has a rich history in film and television, particularly in classic horror and sci-fi genres.
+
+### Conclusion
+The dataset highlights a diverse range of actors who have successfully crossed over between film and television, demonstrating their broad appeal and talent across different media.",6.041,41,41,14,410,424,,,,
+6,List top-rated TV series and their number of seasons.,,chunk_only,"### Top-Rated TV Series and Their Number of Seasons
+
+Based on the provided context, here is a summary of the top-rated TV series along with their respective number of seasons:
+
+| **Title**          | **Vote Average** | **Number of Seasons** |
+|--------------------|------------------|-----------------------|
+| French Fields       | 7.2              | 3.0                   |
+| The Embassy         | 6.242            | 1.0                   |
+
+### Summary
+- **Top-rated series** include:
+  - **French Fields** with a vote average of **7.2** and **3 seasons**.
+  - **The Embassy** with a vote average of **6.242** and **1 season**.
+- The data reflects the **number of seasons** alongside the **vote average** for each series. 
+
+This table provides a clear view of the highest-rated series from the available data.",3.574,25,25,11,188,199,,,,graph_enhanced,"### Summary
+The following table lists the top-rated TV series along with their number of seasons based on the provided context.
+
+### Top-Rated TV Series
+
+| **Title**               | **TMDB ID** | **Vote Average** | **Number of Seasons** |
+|-------------------------|--------------|-------------------|-----------------------|
+| Three Youths            | 196609       | Not Available      | 3                     |
+| The Embassy             | 65536        | 6.242             | 1                     |
+
+### Additional Insights
+- The ratings for the series are derived from the `vote_average` column.
+- The number of seasons is indicated in the `number_of_seasons` column.
+
+### Note
+- The data for the vote average of ""Three Youths"" is not available in the provided context. 
+- Only two series were identified in the context, and the ratings may not reflect a comprehensive list of all available series.",4.025,61,61,11,191,202,,,,
+7,What is the relationship between Breaking Bad and its recommended shows?,,chunk_only,"### Summary
+The context does not provide specific information about **Breaking Bad** or its recommended shows. Therefore, I cannot determine the relationship between **Breaking Bad** and its recommended shows.
+
+### Details
+- **Missing Information**: 
+  - The context does not mention **Breaking Bad** directly.
+  - There are no details regarding recommended shows specifically associated with **Breaking Bad**.
+
+### Conclusion
+Without specific data on **Breaking Bad** or its recommendations, I cannot provide an answer regarding their relationship.",2.229,29,29,12,100,112,,,,graph_enhanced,"### Summary
+The context does not provide specific information about ""Breaking Bad"" or its recommended shows. Therefore, I cannot determine the relationship between ""Breaking Bad"" and its recommended shows based on the provided data.
+
+### Details
+- **Missing Information**: 
+  - There are no references to ""Breaking Bad"" in the provided context.
+  - No details about recommended shows related to ""Breaking Bad"" are available.
+
+### Conclusion
+To answer your question accurately, additional information regarding ""Breaking Bad"" and its associated recommended shows is required.",2.913,47,47,12,107,119,,,,
+8,Give me one example where cast and director fields connect two entities.,,chunk_only,"### Summary
+An example of a connection between cast and director fields can be illustrated using the data from the provided context, specifically focusing on Lars von Trier and his directed movies.
+
+### Example of Connection
+
+| **Entity**          | **Role**        | **Details**                                                                 |
+|---------------------|----------------|-----------------------------------------------------------------------------|
+| **Lars von Trier**  | Director        | Known for directing films such as ""Dancer in the Dark"" and ""Breaking the Waves"". |
+| **Cast Members**    | Actors          | Films directed by Lars von Trier often feature actors like Björk and Emily Watson. |
+
+### Explanation
+- **Lars von Trier** is a prominent director known for his unique filmmaking style and has directed several notable films.
+- The **cast members** in these films are integral to the storytelling and often collaborate with von Trier, creating a direct connection between the director and the actors.
+
+### Additional Insights
+- The **directed_movies** field indicates the films associated with a director, while the **cast_characters** field lists the characters played by actors in those films.
+- This relationship exemplifies how directors and cast members work together to create cinematic experiences, showcasing the collaborative nature of filmmaking. 
+
+This example highlights the interconnectedness of cast and director roles within the film industry, as seen in the context provided.",3.92,51,51,13,276,289,,,,graph_enhanced,"### Summary
+One example of a connection between cast and director fields is the movie **Star Wars** (tmdb_id: 11), directed by **George Lucas** and featuring actors such as **Mark Hamill**, **Harrison Ford**, and **Carrie Fisher**.
+
+### Connection Details
+
+| **Entity**         | **Details**                                                                                   |
+|---------------------|-----------------------------------------------------------------------------------------------|
+| **Movie Title**     | Star Wars                                                                                     |
+| **tmdb_id**        | 11                                                                                           |
+| **Director**        | George Lucas                                                                                 |
+| **Cast**            | Mark Hamill, Harrison Ford, Carrie Fisher                                                    |
+| **Director's Role** | Directed the film, contributing to its overall vision and execution.                        |
+| **Cast's Role**     | Played key characters: Luke Skywalker (Mark Hamill), Han Solo (Harrison Ford), Princess Leia (Carrie Fisher). |
+
+### Additional Information
+- **Release Date**: May 25, 1977
+- **Genres**: Adventure, Action, Science Fiction
+- **Overview**: The film follows Princess Leia, who is captured and held hostage by the evil Imperial forces, and the efforts of Luke Skywalker and Han Solo to rescue her.
+
+This example illustrates how the director and cast are interconnected in the creation of a film, showcasing their collaborative effort in bringing the story to life.",4.535,59,58,13,278,291,,,,
+9,Which movies have both trailer availability and US watch providers?,,chunk_only,"### Summary
+The following movies have both trailer availability and US watch providers:
+
+- **American Beauty**
+- **Post Mortem**
+- **Period.**
+- **Judgment Night**
+- **Forrest Gump**
+- **Star Wars: Episode IV - A New Hope**
+- **Four Rooms**
+
+### Movies with Trailer Availability and US Watch Providers
+
+| Movie Title                          | Trailer Availability | US Watch Providers                                          | Watch Link                                                   |
+|--------------------------------------|----------------------|-----------------------------------------------------------|-------------------------------------------------------------|
+| American Beauty                      | Available            | Paramount Plus Essential, Amazon Video, Apple TV Store    | [Link](https://www.themoviedb.org/movie/14-american-beauty) |
+| Post Mortem                          | Available            | AMC+ Amazon Channel, Philo, Shudder, Amazon Video         | [Link](https://www.themoviedb.org/movie/655363-post-mortem) |
+| Period.                              | Available            | Netflix, Netflix Standard with Ads                         | [Link](https://www.themoviedb.org/movie/524288-period)      |
+| Judgment Night                       | Available            | Amazon Prime Video, fuboTV, Paramount Plus Essential       | [Link](https://www.themoviedb.org/movie/6-judgment-night)   |
+| Forrest Gump                         | Available            | Paramount Plus Premium, Paramount Plus Essential, Kanopy   | [Link](https://www.themoviedb.org/movie/13-forrest-gump)    |
+| Star Wars: Episode IV - A New Hope  | Available            | Disney Plus, Amazon Video, Google Play Movies              | [Link](https://www.themoviedb.org/movie/11-star-wars)       |
+| Four Rooms                           | Available            | Amazon Video, Apple TV Store, Google Play Movies, Kanopy   | [Link](https://www.themoviedb.org/movie/5-four-rooms)       |
+
+### Conclusion
+These movies not only have trailers available but also provide various options for viewing in the US, making them accessible to audiences.",6.672,11,11,11,427,438,,,,graph_enhanced,"### Summary
+The following movies have both trailer availability and US watch providers:
+
+- **American Beauty**
+- **Star Wars**
+
+### Detailed Information
+
+| Movie Title       | Trailer Availability | US Watch Providers                                    |
+|-------------------|---------------------|------------------------------------------------------|
+| American Beauty    | Yes                 | Google Play Movies, Apple TV Store                   |
+| Star Wars          | Yes                 | Disney Plus, Amazon Video, Google Play Movies, YouTube |
+
+### Additional Notes
+- **American Beauty** has a trailer available and can be rented or bought through Google Play Movies and Apple TV Store.
+- **Star Wars** also has a trailer available and is available for streaming on Disney Plus, as well as for rent or purchase on Amazon Video and Google Play Movies.",3.664,52,52,11,151,162,,,,
+10,What genres are most common among high-vote movies in this corpus?,,chunk_only,"### Summary
+The analysis of genres among high-vote movies indicates a diverse range of genres, with **Drama**, **Comedy**, and **Romance** being particularly prominent. The following sections detail the genre distribution and insights based on the provided data.
+
+### Genre Distribution in High-Vote Movies
+
+| Genre                  | Frequency | Sample Vote Average |
+|------------------------|-----------|---------------------|
+| Drama                  | High      | 6.84                |
+| Comedy                 | High      | 6.53                |
+| Romance                | Moderate  | 6.86                |
+| Mystery                | Moderate  | 8.5                 |
+| Sci-Fi & Fantasy       | Moderate  | 7.8                 |
+| Documentary            | Low       | 7.1                 |
+| Action & Adventure     | Low       | 9.0                 |
+| War                    | Low       | 6.9                 |
+
+### Insights
+- **Drama** is the most common genre among high-vote movies, often associated with higher vote averages.
+- **Comedy** also appears frequently, indicating a strong viewer preference for light-hearted content.
+- **Romance** and **Mystery** genres show moderate representation, with some titles achieving notable vote averages.
+- Genres like **Documentary** and **Action & Adventure** are less common but still present, suggesting a niche audience.
+
+### Conclusion
+The data suggests that **Drama** and **Comedy** are the leading genres in high-vote movies, reflecting audience preferences for emotional and entertaining narratives. The presence of various genres indicates a rich diversity in the movie corpus, appealing to different viewer tastes.",5.72,41,41,14,338,352,,,,graph_enhanced,"### Summary
+The most common genres among high-vote movies in the provided corpus can be identified by analyzing the genres associated with movies that have high vote averages. 
+
+### High-Vote Movies Analysis
+To determine the most common genres, we can focus on movies with a **vote_average** above a certain threshold, such as 7.0, which is generally considered a high rating.
+
+#### Key Insights
+- **Vote Average Threshold**: 7.0
+- **Common Genres**: The genres associated with high-vote movies are derived from the dataset.
+
+### Genre Distribution Table
+| Genre                  | Count of Movies |
+|------------------------|------------------|
+| Adventure              | X                |
+| Action                 | Y                |
+| Science Fiction        | Z                |
+| Drama                  | A                |
+| Comedy                 | B                |
+| Romance                | C                |
+
+*Note: Replace X, Y, Z, A, B, C with actual counts derived from the dataset.*
+
+### Conclusion
+- **Adventure**, **Action**, and **Science Fiction** are typically prevalent in high-vote movies, reflecting audience preferences for engaging and imaginative storytelling.
+- **Drama** and **Comedy** also feature prominently, indicating a balance between emotional depth and entertainment value.
+
+### Next Steps
+- For a more detailed analysis, consider performing a frequency count of genres specifically for movies with a **vote_average** greater than 7.0.
+- Visualize the genre distribution using charts for clearer insights into audience preferences. 
+
+This analysis provides a foundational understanding of genre popularity among high-rated films in the dataset.",7.488,58,58,14,323,337,,,,
+11,Who are the creators of popular TV shows and what networks are they on?,,chunk_only,"### Summary
+The creators of popular TV shows and their respective networks are detailed below. The information includes the show titles, creators, and the networks they aired on.
+
+### Creators and Networks of Popular TV Shows
+
+| **Show Title**                     | **Creators**                          | **Networks**                |
+|------------------------------------|---------------------------------------|-----------------------------|
+| Clerks                             | Kevin Smith, David Mandel, Scott Mosier | ABC, Comedy Central          |
+| Match Game                         | Mark Goodson                          | CBS                         |
+| The Embassy                        | Ramón Campos, Gema R. Neira          | Antena 3                   |
+| Three Youths                       | Not specified                         | Zhejiang Television         |
+
+### Additional Insights
+- **Clerks** aired on **ABC** and **Comedy Central**, created by **Kevin Smith**, **David Mandel**, and **Scott Mosier**.
+- **Match Game** was created by **Mark Goodson** and aired on **CBS**.
+- **The Embassy**, a miniseries, was created by **Ramón Campos** and **Gema R. Neira**, airing on **Antena 3**.
+- **Three Youths** is a reality show on **Zhejiang Television**, but the creators are not specified in the provided context.
+
+### Conclusion
+This table summarizes the creators and networks for selected popular TV shows based on the provided data. If further details are needed, please specify!",6.351,31,31,15,298,313,,,,graph_enhanced,"### Summary
+The context provides limited information about TV show creators and their respective networks. However, it does mention a specific TV show and its creator, along with the network it aired on.
+
+### TV Show Creator and Network Information
+
+| **TV Show Title**         | **Creator**       | **Network**         |
+|---------------------------|-------------------|---------------------|
+| I Know Who You Are        | Pau Freixas       | Telecinco           |
+
+### Additional Insights
+- The data indicates that there are potential relationships and grouping columns such as `creator_ids` and `network_ids`, but specific details about other creators and networks are not provided in the context.
+- The analysis suggests that there are many missing values in the `creators` and `network_ids` columns, indicating incomplete data for a comprehensive overview of all creators and networks.
+
+### Conclusion
+- Only one creator and network pairing is explicitly mentioned in the provided context. Further details on other creators and their networks are not available.",3.756,26,26,15,202,217,,,,
+12,Identify one person with directed movies and summarize their profile fields.,,chunk_only,"### Summary
+One individual with directed movies is **Lars von Trier**. Below is a summary of his profile fields based on the provided context.
+
+### Profile Summary of Lars von Trier
+
+| **Field**              | **Details**                                                                                     |
+|-----------------------|-------------------------------------------------------------------------------------------------|
+| **tmdb_id**           | 42                                                                                              |
+| **imdb_id**           | nm0001885                                                                                      |
+| **instagram_id**      | nan                                                                                             |
+| **twitter_id**        | nan                                                                                             |
+| **name**              | Lars von Trier                                                                                 |
+| **also_known_as**     | Lars Trier                                                                                     |
+| **gender**            | Male                                                                                            |
+| **birthday**          | 1956-04-30                                                                                     |
+| **deathday**          | nan                                                                                             |
+| **place_of_birth**    | Copenhagen, Denmark                                                                            |
+| **known_for_dept**    | Directing                                                                                      |
+| **biography**         | Lars von Trier (born Lars Trier; 30 April 1956) is a Danish film director and screenwriter.   |
+| **popularity**        | 1.6512                                                                                         |
+| **known_movies**      | The Idiots, Side by Side, To Each His Own Cinema                                              |
+| **known_movie_ids**   | 452, 110354, 36108, 9065, 5206, 1261119, 250280...                                            |
+| **total_movie_credits** | 59                                                                                           |
+| **directed_movies**   | Dancer in the Dark, Breaking the Waves, The Idiots, Dogville, Manderlay, The Kingdom...      |
+| **directed_movie_ids**| 16, 145, 452, 553, 1951, 22137, 22140, 9063                                                  |
+| **total_directed**    | 36                                                                                             |
+| **known_tv_shows**    | Klovn, Grimme Award, The Story of Film: An Odyssey                                            |
+| **known_tv_ids**      | 367, 88795, 45571, 80019                                                                       |
+| **total_tv_credits**  | 4                                                                                              |
+| **profile_url**       | [Profile Image](https://image.tmdb.org/t/p/h632/a1zVySI0Yqqf3OR...)                          |
+| **homepage**          | nan                                                                                             |
+
+### Key Insights
+- **Total Directed Movies**: Lars von Trier has directed **36** films.
+- **Total Movie Credits**: He has a total of **59** movie credits.
+- **Popularity**: His popularity score is **1.6512**.
+- **Known For**: He is primarily known for his work in **Directing**. 
+
+This profile highlights Lars von Trier's contributions to film as a director and his notable works.",6.929,28,28,13,606,619,,,,graph_enhanced,"### Summary
+One notable person with directed movies is **Robert Zemeckis**. Below is a summary of his profile fields based on the provided context.
+
+### Profile Summary of Robert Zemeckis
+
+| **Field**              | **Details**                                                                                     |
+|-----------------------|-------------------------------------------------------------------------------------------------|
+| **Name**              | Robert Zemeckis                                                                                |
+| **Also Known As**     | Bob Zemeckis, Robert Lee Zemeckis                                                              |
+| **Gender**            | Male                                                                                           |
+| **Birthday**          | May 14, 1952                                                                                  |
+| **Place of Birth**    | Chicago, Illinois, USA                                                                         |
+| **Known For**         | Directing                                                                                      |
+| **Biography**         | Robert Lee Zemeckis is an acclaimed director known for films like *Forrest Gump* and *Back to the Future*. |
+| **Popularity**        | 2.0493                                                                                        |
+| **Total Movie Credits**| 26                                                                                             |
+| **Directed Movies**   | *Forrest Gump*, *Back to the Future*, among others                                             |
+| **Total Directed**    | 32                                                                                             |
+| **Known TV Shows**    | *The Late Show with Stephen Colbert*, *The Oscars*                                            |
+| **Total TV Credits**  | 7                                                                                              |
+| **Profile URL**       | [Profile Image](https://image.tmdb.org/t/p/h632/lPYDQ5LYNJ12rJZ...)                          |
+
+### Notable Works
+- **Directed Movies**: 
+  - *Forrest Gump*
+  - *Back to the Future*
+  
+### Additional Information
+- **Popularity**: Zemeckis has a notable popularity score of **2.0493**, indicating his recognition in the film industry.
+- **TV Contributions**: He has also contributed to various television shows, showcasing his versatility beyond film directing.
+
+This profile encapsulates Robert Zemeckis's significant contributions to cinema and television, highlighting his achievements and recognition in the industry.",7.559,58,58,13,422,435,,,,
+13,What are similar titles for one high-rated movie and one high-rated TV show?,,chunk_only,"### Summary
+- **High-Rated Movie:** ""Star Wars (1977)"" with a rating of 10.0.
+- **Similar Titles:** ""The Empire Strikes Back,"" ""Return of the Jedi,"" ""Revenge of the Sith.""
+- **High-Rated TV Show:** ""With You and the Rain"" with a rating of 5.0.
+- **Similar Titles:** ""Your Lie in April,"" ""A Silent Voice,"" ""Anohana: The Flower We Saw That Day.""
+
+### High-Rated Movie
+
+| **Title**            | **Rating** | **Author**       | **Content**                                      | **URL**                                               |
+|----------------------|------------|------------------|--------------------------------------------------|-------------------------------------------------------|
+| Star Wars (1977)     | 10.0       | gastyny          | Star Wars (1977) is a true masterpiece of cinema.| [Link](https://www.themoviedb.org/review/5e94ea4566565...) |
+
+#### Similar Titles
+| **Similar Titles**                       |
+|------------------------------------------|
+| The Empire Strikes Back                 |
+| Return of the Jedi                      |
+| Revenge of the Sith                     |
+
+### High-Rated TV Show
+
+| **Title**                     | **Rating** | **Author**       | **Content**                                      | **URL**                                               |
+|-------------------------------|------------|------------------|--------------------------------------------------|-------------------------------------------------------|
+| With You and the Rain         | 5.0        | DallasBob        | With You and the Rain _(Ame to Kimi to)_ is in...| [Link](https://www.themoviedb.org/review/68f7e74421576...) |
+
+#### Similar Titles
+| **Similar Titles**                       |
+|------------------------------------------|
+| Your Lie in April                        |
+| A Silent Voice                           |
+| Anohana: The Flower We Saw That Day     |
+
+### Conclusion
+The above tables provide a clear view of one high-rated movie and one high-rated TV show, along with their respective similar titles.",8.685,30,30,16,414,430,,,,graph_enhanced,"### Summary
+- **High-Rated Movie**: ""Star Wars"" with a rating of 8.203 has similar titles.
+- **High-Rated TV Show**: ""Intersection"" with a rating of 9.0 has similar titles.
+
+### High-Rated Movie: Star Wars
+- **Rating**: 8.203
+- **Similar Titles**:
+
+| Similar Titles                          |
+|-----------------------------------------|
+| The Empire Strikes Back                 |
+| Star Wars: The Force Awakens            |
+| Monsterz                                |
+| Lensman                                 |
+| The Puppet Masters                       |
+
+### High-Rated TV Show: Intersection
+- **Rating**: 9.0
+- **Similar Titles**:
+
+| Similar Titles                          |
+|-----------------------------------------|
+| The Story of Film: An Odyssey           |
+| Clandestine Summer                      |
+| The Simpsons                            |
+| Grimme Award                            |
+| The Simpsons (multiple entries)        |
+
+### Conclusion
+The above tables provide a list of similar titles for both a high-rated movie and a high-rated TV show based on the provided context.",4.248,42,42,16,216,232,,,,
+14,"Compare one movie and one TV show by popularity, vote average, and genres.",,chunk_only,"### Summary
+To compare one movie and one TV show based on **popularity**, **vote average**, and **genres**, we will select:
+- **Movie**: ""The Rose Tattoo""
+- **TV Show**: ""Three Youths""
+
+### Comparison Table
+
+| Feature          | Movie: The Rose Tattoo                      | TV Show: Three Youths                       |
+|------------------|--------------------------------------------|---------------------------------------------|
+| **Popularity**    | 1.6512                                     | 5.6977                                      |
+| **Vote Average**  | 6.863                                      | N/A (missing)                               |
+| **Genres**        | Drama, Romance                             | Reality                                      |
+
+### Detailed Insights
+
+#### Popularity
+- **The Rose Tattoo** has a popularity score of **1.6512**, indicating moderate recognition.
+- **Three Youths** has a significantly higher popularity score of **5.6977**, suggesting it is more widely recognized or discussed.
+
+#### Vote Average
+- **The Rose Tattoo** has a vote average of **6.863**, reflecting a generally favorable reception among viewers.
+- **Three Youths** does not have a recorded vote average, which may indicate insufficient ratings or viewer engagement.
+
+#### Genres
+- **The Rose Tattoo** is categorized under **Drama** and **Romance**, appealing to audiences interested in emotional narratives and romantic themes.
+- **Three Youths** is classified as a **Reality** show, targeting viewers who enjoy real-life stories and unscripted content.
+
+### Conclusion
+- The movie ""The Rose Tattoo"" has a solid vote average and a specific genre appeal, while the TV show ""Three Youths"" boasts higher popularity but lacks a vote average. This comparison highlights the different audience engagements and preferences between films and television series.",6.939,35,35,16,360,376,,,,graph_enhanced,"### Comparison of a Movie and a TV Show
+
+**Summary:**
+- **Movie:** ""Star Wars"" (tmdb_id: 11)
+- **TV Show:** ""The Embassy"" (tmdb_id: 65536)
+- **Popularity:** Star Wars has higher popularity.
+- **Vote Average:** Star Wars has a higher vote average.
+- **Genres:** Different genres, showcasing the diversity in content.
+
+---
+
+| Feature          | Star Wars (Movie)                       | The Embassy (TV Show)               |
+|------------------|-----------------------------------------|-------------------------------------|
+| **tmdb_id**      | 11                                      | 65536                               |
+| **Popularity**   | 21.76                                   | 1.914                               |
+| **Vote Average** | 8.6                                     | 6.242                               |
+| **Genres**       | Action, Adventure, Fantasy              | Drama, War & Politics               |
+
+### Detailed Insights
+
+#### Popularity
+- **Star Wars:** 
+  - Popularity score of **21.76**, indicating it is a highly recognized and celebrated film.
+- **The Embassy:** 
+  - Popularity score of **1.914**, suggesting it is less well-known compared to Star Wars.
+
+#### Vote Average
+- **Star Wars:** 
+  - Vote average of **8.6**, reflecting strong audience approval and critical acclaim.
+- **The Embassy:** 
+  - Vote average of **6.242**, which is decent but lower than Star Wars, indicating mixed reviews.
+
+#### Genres
+- **Star Wars:** 
+  - Genres include **Action**, **Adventure**, and **Fantasy**, appealing to a broad audience with its epic storytelling and visual effects.
+- **The Embassy:** 
+  - Genres include **Drama** and **War & Politics**, focusing on more serious themes and narratives.
+
+### Conclusion
+The comparison highlights the stark differences between a blockbuster movie like ""Star Wars"" and a TV show like ""The Embassy."" While ""Star Wars"" excels in popularity and audience ratings, ""The Embassy"" serves a niche audience with its specific genre focus.",6.83,59,59,16,431,447,,,,
+15,Find reviews linked to a title and summarize sentiment hints from rating/content.,,chunk_only,"### Summary
+To find reviews linked to a title and summarize sentiment hints from ratings and content, we can analyze the provided review data for both TV shows and movies. The reviews include ratings and textual content that can indicate sentiment.
+
+### Review Data Overview
+
+#### TV Reviews
+| Review ID                           | TMDB ID | Author            | Rating | Content                                                                 | Created At                  | URL                                                        |
+|-------------------------------------|---------|-------------------|--------|-------------------------------------------------------------------------|-----------------------------|------------------------------------------------------------|
+| 5943085ec3a3686c0d013f27            | 65566   | pua588            | 9.0    | I love Intersection, the story line and more especially the actors.    | 2017-06-15T22:21:18.103Z    | [Link](https://www.themoviedb.org/review/5943085ec3a3686c0d013f27) |
+| 612fe799e25860002cc80758            | 45      | Peter89Spencer    | 9.0    | Ridiculously entertaining car show...in the BBC...                     | 2021-09-01T20:50:33.099Z    | [Link](https://www.themoviedb.org/review/612fe799e25860002cc80758) |
+| 63bf7b6723be46007cb9b413            | 45      | ViscerusMorscer   | 9.0    | My rating is purely for the seasons with the original cast.            | 2023-01-12T03:15:51.853Z    | [Link](https://www.themoviedb.org/review/63bf7b6723be46007cb9b413) |
+
+#### Movie Reviews
+| Review ID                           | TMDB ID | Author            | Rating | Content                                                                 | Created At                  | URL                                                        |
+|-------------------------------------|---------|-------------------|--------|-------------------------------------------------------------------------|-----------------------------|------------------------------------------------------------|
+| 64a87c626a3448014d30cce4            | 13      | llgolden          | 10.0   | Best movie ever.                                                       | 2023-07-07T20:58:10.912Z    | [Link](https://www.themoviedb.org/review/64a87c626a3448014d30cce4) |
+| 64a87c989c97bd01390b8ba9            | 13      | bluedevil667      | 10.0   | This is the best movie ever!                                          | 2023-07-07T20:59:05.017Z    | [Link](https://www.themoviedb.org/review/64a87c989c97bd01390b8ba9) |
+| 669f86844ee7f9f0eddd4e4f            | 13      | CinemaSerf        | 7.0    | ""Forrest"" (Tom Hanks) isn't the sharpest tool in the shed...         | 2024-07-23T10:31:32.707Z    | [Link](https://www.themoviedb.org/review/669f86844ee7f9f0eddd4e4f) |
+
+### Sentiment Analysis
+
+#### TV Reviews Sentiment
+- **High Ratings**: All sampled TV reviews have ratings of **9.0**, indicating strong positive sentiment.
+- **Content Sentiment**:
+  - **Positive**: Expressions of love for the storyline and actors suggest a very favorable view.
+  - **Engagement**: Phrases like ""Ridiculously entertaining"" indicate enjoyment and engagement with the content.
+
+#### Movie Reviews Sentiment
+- **High Ratings**: The sampled movie reviews show ratings of **10.0** and **7.0**, with the majority being very positive.
+- **Content Sentiment**:
+  - **Extreme Positivity**: Phrases like ""Best movie ever"" reflect strong enthusiasm and satisfaction.
+  - **Mixed Sentiment**: The review mentioning ""Forrest"" suggests a more critical perspective, indicating that while the movie is appreciated, there are elements that may not resonate with all viewers.
+
+### Conclusion
+- **Overall Sentiment**: Both TV and movie reviews predominantly reflect **positive sentiment**, with high ratings and enthusiastic content.
+- **Diversity in Opinions**: While most reviews are highly positive, there are hints of mixed feelings in some movie reviews, indicating a range of viewer experiences. 
+
+This analysis provides a clear view of how viewers feel about the titles, with a strong inclination towards positive feedback across the board.",13.927,29,29,14,986,1000,,,,graph_enhanced,"### Summary of Reviews for ""Star Wars""
+
+The reviews for **Star Wars (1977)** reflect a generally **positive sentiment**, with ratings predominantly high. Below is a detailed summary of the reviews linked to this title, including sentiment hints derived from the ratings and content.
+
+| **Review ID**                          | **Author**            | **Rating** | **Content Summary**                                                                 | **Sentiment Hint**         | **Review Date**           | **URL**                                               |
+|----------------------------------------|-----------------------|------------|-------------------------------------------------------------------------------------|-----------------------------|---------------------------|-------------------------------------------------------|
+| 5e94ea4566565a0014baa6c5               | gastyny               | 10.0       | Describes the film as a **masterpiece of cinema**.                                 | Extremely positive          | 2020-04-13                | [Link](https://www.themoviedb.org/review/5e94ea4566565...) |
+| 60174e821b70ae003c643834               | r96sk                 | 9.0        | Praises it as a **quality start to the franchise**.                               | Very positive               | 2021-02-01                | [Link](https://www.themoviedb.org/review/60174e821b70a...) |
+| 63c2163f05a53300e99bfdd1               | GenerationofSwine     | 10.0       | Comments on the **inevitable popularity** of the film and its cultural impact.     | Extremely positive          | 2023-01-14                | [Link](https://www.themoviedb.org/review/63c2163f05a53...) |
+
+### Detailed Review Insights
+
+- **Overall Ratings**: 
+  - The ratings range from **9.0 to 10.0**, indicating a strong appreciation for the film.
+  
+- **Content Analysis**:
+  - **Masterpiece**: The term ""masterpiece"" used by one reviewer suggests a deep admiration for the film's artistic qualities.
+  - **Quality Start**: Another reviewer highlights it as a ""quality start,"" indicating that the film sets a high standard for the franchise.
+  - **Cultural Impact**: The mention of its popularity and cultural significance reflects its lasting legacy in cinema.
+
+### Sentiment Summary
+
+- The reviews collectively suggest that **Star Wars** is viewed as a **seminal work** in film history, with reviewers expressing **enthusiasm** and **admiration**. The high ratings and positive descriptors indicate a strong emotional connection to the film, reinforcing its status as a classic.
+
+### Conclusion
+
+The reviews for **Star Wars (1977)** showcase a **predominantly positive sentiment**, with reviewers celebrating its artistic merit and cultural significance. The film is not only appreciated for its storytelling and characters but also for its impact on the film industry and popular culture.",16.488,63,62,14,600,614,,,,
+16,Which entries include homepage links and what type of media are they?,,chunk_only,"### Summary
+The entries that include homepage links are associated with specific movies and their respective media types. Below is a detailed table summarizing these entries.
+
+### Entries with Homepage Links
+
+| **Media Type** | **Homepage Link**                                          |
+|----------------|-----------------------------------------------------------|
+| Movie          | [Star Wars: Episode IV - A New Hope](http://www.starwars.com/films/star-wars-episode-iv-a-new-hope) |
+| Movie          | [Four Rooms](https://www.miramax.com/movie/four-rooms/) |
+| Movie          | [Forrest Gump](https://www.paramountmovies.com/movies/forrest-gump/) |
+
+### Key Points
+- **Total Entries with Homepage Links**: 3
+- **Media Types**: All entries are categorized as **movies**.
+- **Links**: Each entry provides a direct link to the respective movie's homepage.",3.17,21,21,13,186,199,,,,graph_enhanced,"### Summary
+The entries that include homepage links are primarily related to movies. Below is a detailed table listing the entries with their respective media types and homepage links.
+
+### Entries with Homepage Links
+
+| **Media Type** | **Title**               | **Homepage Link**                                           |
+|----------------|-------------------------|------------------------------------------------------------|
+| Movie          | Star Wars               | [Star Wars Homepage](http://www.starwars.com/films/star-wars-episode...) |
+| Movie          | Four Rooms              | [Four Rooms Homepage](https://www.miramax.com/movie/four-rooms/) |
+| Movie          | Forrest Gump            | [Forrest Gump Homepage](https://www.paramountmovies.com/movies/forrest-...) |
+| Movie          | Ariel                   | [Ariel Homepage](https://www.themoviedb.org/movie/2-ariel/watch?...) |
+
+### Notes
+- The **media type** for all entries listed is **movie**.
+- The **homepage links** direct to official or related websites for the respective movies. 
+
+This table summarizes the relevant entries from the provided context regarding homepage links and their media types.",4.685,49,49,13,237,250,,,,
+17,Show one example of franchise-like relation via collection_name or similar_ids.,,chunk_only,"### Example of Franchise-Like Relation
+
+**Summary:**
+A franchise-like relation can be illustrated through the **Star Wars Collection**, which includes multiple films under a single collection name. This demonstrates how films can be grouped together based on their shared universe or storyline.
+
+### Franchise Details
+
+| **Collection Name**         | **Film Titles**                                                                                          | **Similar IDs**                               |
+|-----------------------------|----------------------------------------------------------------------------------------------------------|------------------------------------------------|
+| Star Wars Collection        | Star Wars, Star Wars: The Empire Strikes Back, Star Wars: Return of the Jedi, Star Wars: The Force Awakens | 274804, 25525, 25557, 25278, 25392           |
+
+### Key Points
+- **Collection Name**: The films are categorized under the **Star Wars Collection**, indicating they belong to the same franchise.
+- **Film Titles**: The collection includes iconic titles such as **Star Wars** and its sequels.
+- **Similar IDs**: The collection also has associated similar IDs that link to other related films, enhancing the franchise's interconnectedness.
+
+This example highlights how films can be grouped into franchises through collection names and shared identifiers, facilitating audience engagement and marketing strategies.",4.36,35,35,14,240,254,,,,graph_enhanced,"### Example of Franchise-Like Relation
+
+**Summary:**
+The ""Star Wars Collection"" serves as a prime example of a franchise-like relation, linking multiple films under a unified collection name. 
+
+### Franchise Details
+
+| **Collection Name**         | **Related Movies**                                                                                   |
+|-----------------------------|------------------------------------------------------------------------------------------------------|
+| **Star Wars Collection**    | - **Star Wars** (1977)   - **The Empire Strikes Back** (1980)   - **Star Wars: The Force Awakens** (2015)   - Additional similar titles: Monsterz, Lensman, The Puppet Masters, etc. |
+
+### Key Attributes of the Franchise
+
+- **Collection ID:** 10.0
+- **Cast Names:** Mark Hamill, Harrison Ford, Carrie Fisher, etc.
+- **Director:** George Lucas
+- **Genres:** Adventure, Action, Science Fiction
+- **Trailer Available:** [Watch Trailer](https://youtube.com/watch?v=XsS1yE2f-hE)
+
+### Conclusion
+The **Star Wars Collection** exemplifies a franchise-like relation by grouping films that share a common universe, characters, and themes, thereby enhancing the viewer's experience and engagement with the series.",6.064,34,34,14,250,264,,,,
+18,Which US certification or US content rating appears for notable titles?,,chunk_only,"### Summary
+The provided context does not contain specific information regarding US certifications or content ratings for notable titles. Therefore, it is not possible to provide a comprehensive answer regarding US content ratings based on the given data.
+
+### Details
+- **US Certification Information**: The context lacks any mention of US certifications such as G, PG, PG-13, R, or NC-17.
+- **Notable Titles**: While there are references to various movies and TV shows, no specific titles are linked to their respective content ratings.
+
+### Conclusion
+Without explicit data on US certifications or content ratings in the provided context, I cannot provide the requested information.",4.041,39,39,12,128,140,,,,graph_enhanced,"### Summary
+The context provides information about various movies and TV shows, including their US certifications or content ratings. Notable titles mentioned include ""American Beauty,"" ""Four Rooms,"" and ""Star Wars."" The US certifications for these titles are as follows:
+
+- **American Beauty**: Rated **R**
+- **Four Rooms**: Rated **R**
+- **Star Wars**: No specific US certification mentioned.
+
+### US Certifications for Notable Titles
+
+| Title             | US Certification |
+|-------------------|------------------|
+| American Beauty    | R                |
+| Four Rooms         | R                |
+| Star Wars          | Not specified     |
+
+### Additional Notes
+- The context does not provide a comprehensive list of US certifications for all titles, but it highlights the ratings for the notable ones mentioned.
+- Other titles may exist in the dataset, but their US certifications were not detailed in the provided context.",10.06,58,58,12,179,191,,,,
+19,Find a title and link it to available watch_us options in the dataset.,,chunk_only,"### Summary
+The dataset contains various titles along with their respective watch options in the US. Below is a table listing a selection of titles and their corresponding watch options available in the US.
+
+### Available Titles and Watch Options
+
+| Title                          | Watch Options                                                                                          | Watch Link                                                                                          |
+|--------------------------------|--------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| Post Mortem                    | AMC+ Amazon Channel, Philo, Shudder, Shudder Amazon Channel                                           | [Post Mortem](https://www.themoviedb.org/movie/655363-post-mo...)                                 |
+| American Beauty                | Paramount Plus Essential, Amazon Video, Apple TV Store, Google Play Movies                            | [American Beauty](https://www.themoviedb.org/movie/14-american-be...)                             |
+| Varjoja paratiisissa          | Criterion Channel                                                                                     | [Varjoja paratiisissa](https://www.themoviedb.org/movie/3-varjoja-para...)                       |
+| Ariel                          | Criterion Channel                                                                                     | [Ariel](https://www.themoviedb.org/movie/2-ariel/watch?...)                                       |
+| E-1027                         | Amazon Video, Apple TV Store, Kanopy                                                                  | [E-1027](https://www.themoviedb.org/movie/1245193-e-1027...)                                     |
+| Judgment Night                 | Amazon Prime Video, fuboTV, Paramount Plus Essential                                                 | [Judgment Night](https://www.themoviedb.org/movie/6-judgment-nig...)                              |
+| Star Wars: Episode IV - A New Hope | Disney Plus, Amazon Video, Google Play Movies, YouTube                                             | [Star Wars: Episode IV](https://www.themoviedb.org/movie/11-star-wars/w...)                      |
+| Four Rooms                     | Amazon Video, Apple TV Store, Google Play Movies, Kanopy, Hoopla                                     | [Four Rooms](https://www.themoviedb.org/movie/5-four-rooms/w...)                                  |
+| Forrest Gump                   | Paramount Plus Premium, Paramount Plus Essential, Amazon Video, Apple TV Store, Google Play Movies    | [Forrest Gump](https://www.themoviedb.org/movie/13-forrest-gum...)                                 |
+
+### Conclusion
+This table provides a clear overview of selected titles along with their available watch options in the US, allowing users to easily find where they can view these films.",6.664,28,28,15,504,519,,,,graph_enhanced,"### Available Movie Title and Watch Options
+
+**Title:** Star Wars  
+**Link:** [Watch Star Wars](https://www.themoviedb.org/movie/11-star-wars/w)
+
+#### Watch Options
+| **Service**          | **Type**      |
+|----------------------|---------------|
+| Disney Plus          | Flatrate      |
+| Amazon Video         | Rent          |
+| Google Play Movies    | Rent          |
+| YouTube             | Rent          |
+| Amazon Video         | Buy           |
+| Apple TV Store      | Buy           |
+| Google Play Movies    | Buy           |
+
+### Summary
+- The movie **Star Wars** is available for streaming on **Disney Plus**.
+- It can be rented from **Amazon Video**, **Google Play Movies**, and **YouTube**.
+- It can be purchased from **Amazon Video**, **Apple TV Store**, and **Google Play Movies**.",3.955,43,43,15,181,196,,,,
+20,Build a short multi-hop explanation connecting person -> title -> recommendation.,,chunk_only,"### Summary
+To connect a **person** to a **title** and then to a **recommendation**, we can follow a structured path through the data. This involves identifying a reviewer (person), the title they reviewed, and the recommended titles associated with that specific title.
+
+### Connection Steps
+
+#### 1. **Identify the Person**
+- **Example Reviewer**: Let's take **CinemaSerf** as a reviewer from the sample data.
+  
+#### 2. **Link to Title**
+- **Title Reviewed**: CinemaSerf has reviewed the movie with **tmdb_id: 11**.
+- **Title Details**:
+  - **Title**: Star Wars (1977)
+  - **Rating**: 10.0
+  - **Content**: ""Star Wars (1977) is a true masterpiece of cinema...""
+
+#### 3. **Recommendations Based on Title**
+- **Recommended Titles**: Based on the title Star Wars (1977), we can look at the recommendations provided in the dataset.
+- **Example Recommendations**:
+  - **Recommended Titles**: 
+    - Temptation Island
+    - Love After Lockup
+    - Life of K...
+
+### Structured Table of Connections
+
+| **Step**           | **Details**                                                                                     |
+|--------------------|-------------------------------------------------------------------------------------------------|
+| **Person**         | CinemaSerf                                                                                     |
+| **Title Reviewed** | Star Wars (1977)                                                                              |
+| **Rating**         | 10.0                                                                                           |
+| **Content**        | ""Star Wars (1977) is a true masterpiece of cinema...""                                        |
+| **Recommendations** | - Temptation Island - Love After Lockup - Life of K...                                 |
+
+### Conclusion
+This multi-hop explanation illustrates how a reviewer (CinemaSerf) connects to a title (Star Wars) and subsequently leads to recommendations based on that title. This structured approach allows for clear understanding and navigation through the dataset.",6.757,32,32,13,397,410,,,,graph_enhanced,"### Summary
+To connect a **person** to a **title** and then to a **recommendation**, we can follow a multi-hop reasoning process using the provided data. This involves identifying a person, linking them to a title they are associated with, and then finding recommendations based on that title.
+
+### Step 1: Identify a Person
+- **Example Person**: Lars von Trier
+  - **tmdb_id**: 42
+  - **Known For**: Directing
+
+### Step 2: Connect to a Title
+- **Example Title**: ""The Idiots""
+  - **tmdb_id**: 452 (one of the known movies for Lars von Trier)
+  - **Overview**: A film that explores the lives of a group of people who pretend to be mentally challenged to escape societal norms.
+
+### Step 3: Find Recommendations
+- **Recommendations Based on ""The Idiots""**:
+  - **Similar Titles**: 
+    - ""Breaking the Waves""
+    - ""Dancer in the Dark""
+    - ""Melancholia""
+  - These titles are often recommended due to their thematic similarities or shared directors.
+
+### Connection Table
+
+| **Person**          | **Title**          | **Recommendation**                |
+|---------------------|--------------------|-----------------------------------|
+| Lars von Trier      | The Idiots         | Breaking the Waves                |
+|                     |                    | Dancer in the Dark               |
+|                     |                    | Melancholia                      |
+
+### Conclusion
+By following this multi-hop reasoning:
+- We start with **Lars von Trier** as a notable director.
+- We connect him to the film **""The Idiots""**.
+- Finally, we identify recommendations such as **""Breaking the Waves""**, which are relevant to viewers interested in his work. 
+
+This process illustrates how individuals in the entertainment industry can be linked to their works and subsequent viewer recommendations.",16.484,68,68,13,393,406,,,,

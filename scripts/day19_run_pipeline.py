@@ -82,6 +82,12 @@ def main() -> int:
         help="Optional questions file (.txt or .csv with question column)",
     )
     parser.add_argument(
+        "--from-step",
+        choices=["full", "benchmark_only"],
+        default="full",
+        help="Run full pipeline or only benchmark step",
+    )
+    parser.add_argument(
         "--ingest-mode",
         choices=["target_7_csv"],
         default="target_7_csv",
@@ -133,6 +139,19 @@ def main() -> int:
         code = run_cmd(compose_up_cmd, root)
         if code != 0:
             return code
+
+    if args.from_step == "benchmark_only":
+        bench_cmd = ["python", "scripts/day19_benchmark.py"]
+        if args.benchmark_questions:
+            bench_cmd += ["--questions-file", str(args.benchmark_questions)]
+        code = run_inside_backend(args.compose_cmd, bench_cmd, root)
+        if code != 0:
+            return code
+        print("\nDay 19 benchmark-only run finished successfully.")
+        print("Outputs:")
+        print("- reports/day19_benchmark_results.csv")
+        print("- reports/day19_benchmark_summary.md")
+        return 0
 
     # 2) Data precheck
     precheck_cmd = [
