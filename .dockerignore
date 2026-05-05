@@ -2,9 +2,6 @@
 .env
 .env.*
 
-# Original requirements (we use requirements-docker.txt instead)
-requirements.txt
-
 # Python cache and compiled files
 __pycache__/
 *.py[cod]
