@@ -69,6 +69,18 @@ services:
       - graphrag_network
     depends_on:
       - neo4j
+      - ollama
+    restart: unless-stopped
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    volumes:
+      - ollama_data:/root/.ollama
+    ports:
+      - "11434:11434"
+    networks:
+      - graphrag_network
     restart: unless-stopped
 
   frontend:
@@ -102,3 +114,4 @@ volumes:
   neo4j_data:
   neo4j_logs:
   neo4j_plugins:
+  ollama_data:
