@@ -1,0 +1,20 @@
+What movies starring Keanu Reeves are listed, and who directed them?
+Which TV shows created by Vince Gilligan are in the dataset?
+Find a movie with high ROI and summarize its genre and main cast.
+What are the recommended titles related to The Matrix?
+Which actor appears in both movie and TV credits according to this dataset?
+List top-rated TV series and their number of seasons.
+What is the relationship between Breaking Bad and its recommended shows?
+Give me one example where cast and director fields connect two entities.
+Which movies have both trailer availability and US watch providers?
+What genres are most common among high-vote movies in this corpus?
+Who are the creators of popular TV shows and what networks are they on?
+Identify one person with directed movies and summarize their profile fields.
+What are similar titles for one high-rated movie and one high-rated TV show?
+Compare one movie and one TV show by popularity, vote average, and genres.
+Find reviews linked to a title and summarize sentiment hints from rating/content.
+Which entries include homepage links and what type of media are they?
+Show one example of franchise-like relation via collection_name or similar_ids.
+Which US certification or US content rating appears for notable titles?
+Find a title and link it to available watch_us options in the dataset.
+Build a short multi-hop explanation connecting person -> title -> recommendation.
