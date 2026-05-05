@@ -11,7 +11,14 @@ This command will:
 - start Docker services (`neo4j`, `backend`, `frontend`, `ollama`),
 - precheck `data/`,
 - setup Neo4j indexes,
-- ingest documents from `data/`,
+- ingest only 7 target CSV files from `data/`:
+  - `movies.csv`
+  - `tv_shows.csv`
+  - `people.csv`
+  - `movie_reviews.csv`
+  - `tv_reviews.csv`
+  - `orphan_movies.csv`
+  - `orphan_tv.csv`
 - print post-ingestion stats,
 - run Flat vs Graph benchmark (20 questions),
 - export reports.
@@ -39,7 +46,13 @@ docker-compose exec -T backend python scripts/day19_data_precheck.py --data-dir 
 docker-compose exec -T backend python scripts/setup_neo4j.py --test --setup --stats
 
 # Ingest
-docker-compose exec -T backend python scripts/ingest_documents.py --input-dir data --recursive
+docker-compose exec -T backend python scripts/ingest_documents.py --file data/movies.csv
+docker-compose exec -T backend python scripts/ingest_documents.py --file data/tv_shows.csv
+docker-compose exec -T backend python scripts/ingest_documents.py --file data/people.csv
+docker-compose exec -T backend python scripts/ingest_documents.py --file data/movie_reviews.csv
+docker-compose exec -T backend python scripts/ingest_documents.py --file data/tv_reviews.csv
+docker-compose exec -T backend python scripts/ingest_documents.py --file data/orphan_movies.csv
+docker-compose exec -T backend python scripts/ingest_documents.py --file data/orphan_tv.csv
 
 # Post-ingest stats
 docker-compose exec -T backend python scripts/setup_neo4j.py --stats

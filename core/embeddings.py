@@ -219,14 +219,44 @@ class EmbeddingManager:
     @retry_with_exponential_backoff(max_retries=5, base_delay=3.0, max_delay=180.0)
     def _get_ollama_embedding(self, text: str) -> List[float]:
         """Generate embedding using Ollama with retry logic."""
-        # Rate limiting is already handled in get_embedding
-        response = requests.post(
-            f"{self.ollama_base_url}/api/embeddings",
-            json={"model": self.model, "prompt": text},
-            timeout=120,
-        )
-        response.raise_for_status()
-        return response.json().get("embedding", [])
+        # Rate limiting is already handled in get_embedding.
+        # Ollama versions differ:
+        # - legacy: POST /api/embeddings {model, prompt}
+        # - newer : POST /api/embed      {model, input}
+        endpoints = [
+            ("/api/embeddings", {"model": self.model, "prompt": text}),
+            ("/api/embed", {"model": self.model, "input": text}),
+        ]
+
+        last_error = None
+        for path, payload in endpoints:
+            try:
+                response = requests.post(
+                    f"{self.ollama_base_url}{path}",
+                    json=payload,
+                    timeout=120,
+                )
+                if response.status_code == 404:
+                    last_error = requests.HTTPError(
+                        f"404 Not Found for url: {self.ollama_base_url}{path}"
+                    )
+                    continue
+                response.raise_for_status()
+                data = response.json()
+                # /api/embeddings -> {"embedding":[...]}
+                if "embedding" in data:
+                    return data.get("embedding", []) or []
+                # /api/embed -> {"embeddings":[[...]]}
+                embeddings = data.get("embeddings", [])
+                if embeddings and isinstance(embeddings, list):
+                    return embeddings[0] if isinstance(embeddings[0], list) else []
+                return []
+            except Exception as exc:
+                last_error = exc
+
+        if last_error:
+            raise last_error
+        return []
 
     async def aget_embedding(self, text: str) -> List[float]:
         """Asynchronously generate embedding for a single text using httpx.AsyncClient with retry logic."""

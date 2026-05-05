@@ -5,6 +5,7 @@ CLI script for ingesting documents into the GraphRAG pipeline.
 import argparse
 import logging
 import sys
+import time
 from pathlib import Path
 
 # Add the project root to Python path
@@ -19,6 +20,33 @@ logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
 )
 logger = logging.getLogger(__name__)
+
+
+def wait_for_entity_extraction(timeout_seconds: int = 1800, poll_seconds: float = 2.0) -> bool:
+    """
+    Wait for background entity extraction jobs to complete.
+
+    Returns:
+        True if all jobs completed within timeout, False otherwise.
+    """
+    start = time.time()
+    while True:
+        running = document_processor.is_entity_extraction_running()
+        if not running:
+            logger.info("✅ Background entity extraction completed")
+            return True
+
+        elapsed = time.time() - start
+        if elapsed >= timeout_seconds:
+            logger.warning(
+                "⚠️ Timed out waiting for background entity extraction after %.1fs",
+                elapsed,
+            )
+            status = document_processor.get_entity_extraction_status()
+            logger.warning("Current extraction status: %s", status)
+            return False
+
+        time.sleep(poll_seconds)
 
 
 def ingest_single_file(file_path: Path) -> bool:
@@ -40,6 +68,9 @@ def ingest_single_file(file_path: Path) -> bool:
             logger.info(
                 f"✅ Successfully processed {file_path}: {chunks_created} chunks created"
             )
+            if settings.enable_entity_extraction:
+                logger.info("Waiting for background entity extraction to finish...")
+                wait_for_entity_extraction()
             return True
         else:
             error = (
@@ -74,6 +105,9 @@ def ingest_directory(directory_path: Path, recursive: bool = False) -> tuple[int
         logger.info(
             f"✅ Directory processing complete: {successful}/{total} files successful"
         )
+        if settings.enable_entity_extraction and total > 0:
+            logger.info("Waiting for background entity extraction to finish...")
+            wait_for_entity_extraction()
 
         # Log details for failed files
         for result in results:

@@ -10,6 +10,16 @@ import subprocess
 import sys
 from pathlib import Path
 
+TARGET_CSV_FILES = [
+    "movies.csv",
+    "tv_shows.csv",
+    "people.csv",
+    "movie_reviews.csv",
+    "tv_reviews.csv",
+    "orphan_movies.csv",
+    "orphan_tv.csv",
+]
+
 
 def parse_env_file(path: Path) -> dict[str, str]:
     data: dict[str, str] = {}
@@ -70,6 +80,12 @@ def main() -> int:
         type=Path,
         default=None,
         help="Optional questions file (.txt or .csv with question column)",
+    )
+    parser.add_argument(
+        "--ingest-mode",
+        choices=["target_7_csv"],
+        default="target_7_csv",
+        help="Ingestion scope: fixed 7 business CSV files",
     )
     args = parser.parse_args()
 
@@ -139,17 +155,27 @@ def main() -> int:
         return code
 
     # 4) Ingest data
-    ingest_cmd = [
-        "python",
-        "scripts/ingest_documents.py",
-        "--input-dir",
-        str(args.data_dir),
-    ]
-    if args.recursive:
-        ingest_cmd.append("--recursive")
-    code = run_inside_backend(args.compose_cmd, ingest_cmd, root)
-    if code != 0:
-        return code
+    data_dir_abs = (root / args.data_dir).resolve()
+    missing_files = [name for name in TARGET_CSV_FILES if not (data_dir_abs / name).exists()]
+    if missing_files:
+        print("ERROR: Missing required target CSV files:")
+        for name in missing_files:
+            print(f"- {data_dir_abs / name}")
+        return 1
+
+    print("\nIngest mode: target_7_csv")
+    for name in TARGET_CSV_FILES:
+        rel_file = args.data_dir / name
+        ingest_cmd = [
+            "python",
+            "scripts/ingest_documents.py",
+            "--file",
+            str(rel_file),
+        ]
+        code = run_inside_backend(args.compose_cmd, ingest_cmd, root)
+        if code != 0:
+            print(f"ERROR: ingestion failed for {rel_file}")
+            return code
 
     # 5) Post-ingest stats
     code = run_inside_backend(
